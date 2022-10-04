@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Maven Pro', sans-serif;
+    background-color: #0b1315;
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none ;
+}
+
+/* start header */
+nav{
+    width: 100%;
+    background-color: #0b1315f7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:2% 0  ;
+    height: 75px;
+    box-shadow: 1px 1px 10px #000000f2;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+nav .logo{
+    width:fit-content;
+    position:absolute ;
+    left: 0;
+    padding: 2%;
+    margin-left: 50px;
+    color: #c3a36a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+nav ul li{
+    position: relative;
+    padding:1%;
+}
+nav ul li::before{
+    content: ' ';
+    position:absolute;
+    bottom: -5px;
+    right: -5px;
+    width:0%;
+    height: 1px;
+    background-color: #c3a36a;
+    transition: 0.15s ease-in-out;
+    transition-delay: 0.15s;
+}
+nav ul li::after{
+    content: ' ';
+    position:absolute;
+    bottom: 0;
+    left: 0px;
+    width:0%;
+    height: 1px;
+    background-color: #c3a36a;
+    transition: 0.15s ease-in-out;
+}
+nav ul li:hover:after,nav ul li:hover::before{
+    width: 100%;
+}
+nav ul li a{
+    color: #cbd1d1;
+}
+
+.header input,
+.header label{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.header label{
+    width: 25px;
+    height: 25px;
+    margin-right: 3%;
+    top:25px ;
+    display: none;
+    transition: 0.35s ease-in-out;
+    transition-delay: 0.35s;
+}
+.header input{
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+.header label span{
+    position: absolute;
+    width:100% ;
+    height: 1px;
+    background: #c3a36a;
+    top:0;
+    left: 0;
+    transition: 0.35s ease-in-out;
+    transition-delay: 0.35s;
+}
+.header label span::before{
+    content: '';
+    width:100% ;
+    height: 1px;
+    background: #c3a36a;
+    position: absolute;
+    top: 12px;
+    transition: 0.35s ease-in-out;
+    transition-delay: 0.35s;
+    right: 0;
+}
+.header label span::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #c3a36a;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    transition: 0.35s ease-in-out;
+    transition-delay: 0.35s;
+}
+
+
+.header .log-in{
+    text-align: center;
+    width:fit-content;
+    position:absolute ;
+    right: 0;
+
+    margin-right: 50px;
+
+}
+.header .log-in a {
+    color: #cbd1d1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c3a36a;
+    border-radius: 20em;
+    cursor: pointer;
+    padding:10px 25px;
+    text-align: center;
+    width:fit-content;
+}
+/* end header */
+
+
+
+/* start backgroud slider */
+
+.mySlides {
+    display: none;
+    z-index: -1;
+}
+
+/* Set img backgound */
+
+.mySlides .img1{background-image: url("../img/food\ img/full1.jpg");}
+
+.mySlides .img2{background-image: url("../img/food\ img/full2.jpg");}
+
+.mySlides .img3{background-image: url("../img/food\ img/full3.jpg");}
+
+.mySlides .img4{background-image: url("../img/food\ img/full4.jpg");}
+
+.mySlides .img-holder{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Caption text */
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 0 20px #00000080;
+    color: #cbd1d1;
+    margin-top: 100px;
+    border-radius: 12px;
+}
+
+.text a{
+    color:#cbd1d1;;
+}
+
+.text p{
+    margin-top: 10px;
+}
+
+/* The dots/bullets/indicators */
+
+/* Fading animation */
+.fade {
+    z-index: -1;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration:1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+    0%{opacity: .4;}
+     100%{opacity: 1}
+}
+@keyframes fade {
+  0% {opacity: .4}
+   100%{opacity: 1}
+}
+
+
+@media only screen and (max-width: 750px) {
+    /* Set img backgound */
+
+    .mySlides .img1{background-image: url("../img/food\ img/medium1.jpg");}
+
+    .mySlides .img2{background-image: url("../img/food\ img/medium2.jpg");}
+
+    .mySlides .img3{background-image: url("../img/food\ img/medium3.jpg");}
+
+    .mySlides .img4{background-image: url("../img/food\ img/medium4.jpg");}
+}
+
+
+
+
+@media only screen and (max-width: 530px) {
+    .header label{
+        display: block;
+        z-index: 101;
+        cursor: pointer;
+    }
+    .header input ~nav {transition: 0.35s ease-in;transition-delay: 0.35s;}
+    .header input ~nav .logo{
+        margin-left: 20px;
+        text-align: center;
+        transition: 0.35s ease-in-out;
+        top: 12.5px;
+        transition-delay:0.35s ;
+    }
+    .header input:checked ~nav .logo{
+        margin-left: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition-delay: 0s;
+    }
+    .header input:checked ~nav {
+        height: 100vh;
+        transition-delay: 0s ;
+    }
+    .header input ~nav ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-around;
+        align-items: center;
+        left: -1000px;
+        transition:0.35s ease-in-out;
+        height: 60vh;
+        width: calc(fit-content+5px);
+        top: 40%;
+        transform: translate(-50%,-50%);
+    }
+    .header input:checked ~ nav ul{
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition-delay: 0.35s;
+    }
+    .header input:checked ~ label span::before{
+        width: 0%;
+        transition-delay: 0s;
+    }
+    .header input:checked ~ label span::after{
+        width: 25px;
+        height: 1px;
+        top: 12px;
+        left: -12px;
+        transition-delay: 0s;
+
+    }
+    .header input:checked ~ label span{
+        width: 1px;
+        height: 100%;
+        left: 12px;
+        transition-delay: 0s;
+    }
+    .header input:checked ~ label{
+        transform: rotate(45deg);
+        transition-delay: 0s;
+    }
+
+    .header  nav .log-in{
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+        transition: 0.35s ease-in-out;
+        bottom: 23%;
+        transition-delay:0.35s ;
+    }
+
+    .header input:checked ~ nav .log-in{
+        opacity: 1;
+
+        transition-delay: 0s;
+    }
+
+    /* Set img backgound */
+
+    .mySlides .img1{background-image: url("../img/food\ img/small1.jpg");}
+
+    .mySlides .img2{background-image: url("../img/food\ img/small2.jfif");}
+
+    .mySlides .img3{background-image: url("../img/food\ img/small3.jpg");}
+
+    .mySlides .img4{background-image: url("../img/food\ img/small4.jfif");}
+}

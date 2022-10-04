@@ -1,0 +1,497 @@
+/*Start Main Rules*/
+*{
+		box-sizing: border-box;
+}
+html{
+		scroll-behavior: smooth;
+}
+body{
+		margin: 0;
+		padding: 0;
+		background-color: #0b1315;
+		font-family:'Maven Pro', sans-serif;
+		z-index: -1;
+		/* overflow-x: hidden; */
+}
+.container{
+		width: 75%;
+		display: block;
+		margin:auto;
+}
+
+a{
+		text-decoration: none;
+}
+
+/* End Main Rules */
+
+/* Start Header */
+
+		/* Start back to home hover effect */
+
+header .back {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		transition: 0.4s ease-in-out;
+		margin: 50px;
+}
+header .back .roof1,
+header .back .roof2{
+		position: absolute;
+		width: 70%;
+		height: 2px;
+		background: #9e804b;
+		transition: 0.4s ease-in-out;
+}
+header .back .roof1{
+		transform: rotate(45deg);
+		top: 30%;
+		left: 37%;
+		
+}
+header .back .roof2{
+		transform: rotate(-45deg);
+		top: 30%;
+		right: 40%;
+}
+header .back .wall1,
+header .back .wall2{
+		position: absolute;
+		width: 2px;
+		height: 60%;
+		background: #9e804b;
+		bottom: 0;
+		transition: 0.4s ease-in-out;
+}
+header .back .wall1{
+		left: 15%;
+}
+header .back .wall2{
+		right: 17%;
+
+}
+header .back:hover{
+		transform: rotate(-90deg) ;
+}
+header .back:hover .roof1,
+header .back:hover .roof2{
+		width: 50%;
+}
+header .back:hover .roof2{
+		right: 45%;
+}
+header .back:hover .wall1
+{
+		height: 85%;
+		left: 48%;
+		transform: translateX(-50%);
+}
+header .back:hover .wall2{
+		height:0;
+}
+
+		/* end back to Home hover effect */
+
+header .img-holder{
+		width: 100%;
+		height: 95vh;
+		background: url(../img/food\ img/full4.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow:0 1px 20px #00000089;
+}
+header .img-holder h1{
+		font-family: "Brush Script MT",sans-serif;
+		font-size: 600%;
+		color: #cbd1d1;
+		border-top: 10px solid #cbd1d1 ;
+		border-bottom: 10px solid #cbd1d1 ;
+}
+
+/* End Header */
+
+/* Start Contact Info */
+
+.contact-info{
+		margin-top: 25px;
+}
+.contact-info .title{
+		position: relative;
+		display: block;
+		margin: auto;
+		padding: 25px 0;
+		color: #cbd1d1;
+		height: fit-content;
+		width: 50%;
+		text-align: center;
+}
+
+		/* Start Title Hover effect */
+
+.contact-info .title h1::before,
+.contact-info .title h1::after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 1px;
+		background: #9e804b;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: 0.25s ease-in;
+}
+.contact-info .title h1::before{
+		left:-15%;
+}
+.contact-info .title h1::after{
+		right: -15%;
+}
+.contact-info:hover .title h1::before,
+.contact-info:hover .title h1::after{
+		width: 30%;
+}
+
+		/* End Title Hover effect */
+
+.contact-info .contact{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		color: #cbd1d1;
+}
+.contact-info .contact h3,
+.contact-info .contact i{
+		color: #9e804b;
+}
+.contact-info .contact h3 a{
+		text-decoration: none;
+		color: #9e804b;
+}
+.contact-info .contact div{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		color: #cbd1d1;
+}
+.contact-info .contact .location{
+		margin-bottom: 30px;
+}
+.contact-info .contact .vline{
+		margin-top: 40px;
+		width: 2px;
+		height: 150px;
+		background-color: #9e804b;
+}
+
+/* End Contact Info */
+
+/* Start Contact us Form */
+
+.conact-us{
+		margin: 50px;
+}
+
+.contact-us .title{
+		position: relative;
+		display: block;
+		margin: auto;
+		color: #cbd1d1;
+		height: fit-content;
+		width: 50%;
+		text-align: center;
+		padding: 25px 0;
+}
+		/* Start Title Hover effect */
+
+.contact-us .title h1::before,
+.contact-us .title h1::after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 1px;
+		background: #9e804b;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: 0.25s ease-in;
+}
+.contact-us .title h1::before{
+		left:-7%;
+}
+.contact-us .title h1::after{
+		right:-7%;
+}
+.contact-us:hover .title h1::before,
+.contact-us:hover .title h1::after{
+		width: 30%;
+}
+
+		/* End Title Hover effect */
+
+
+
+.send-email-form{
+	display: grid;
+	grid-template-columns: 1fr;
+	z-index: 5;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0rem 10px;
+	transition: all 0.2s 0.7s;
+	overflow: hidden;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.name-container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.input-field {
+	width: 100%;
+	background-color: #040809;
+	margin: 10px 0;
+	height: 55px;
+	border-radius: 55px;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	padding: 0 0.4rem;
+	position: relative;
+}
+.name-container .input-field{
+	width: 49%;
+	grid-template-columns: 15% 85%;
+}
+
+
+
+.input-field i {
+	text-align: center;
+	line-height: 55px;
+	color: #1d2c2e;
+	transition: 0.5s;
+	font-size: 1.1rem;
+}
+
+.input-field input {
+	background: none;
+	outline: none;
+	border: none;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: #779898;
+}
+
+.text-area{
+	margin: 10px 0;
+	background: #040809;
+	width: 100%;
+	height: 150px;
+	min-height: fit-content;
+	border-radius:25px;
+}
+
+textarea{
+	height: 100%;
+	padding:25px 35px;
+	background: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	resize: none;
+	line-height: 1;
+	color: #779898;
+	border-radius:25px;
+	font-size: 1rem;
+	font-family:'Maven Pro', sans-serif;
+}
+.text-area,
+.input-field{
+	transition:0.5s;
+}
+
+.text-area textarea::placeholder,
+.input-field input::placeholder {
+	color: #1d2c2e;
+	font-weight: 500;
+}
+
+.text-area:focus-within,
+.input-field:focus-within{
+	box-shadow: 0 0 5px 2.5px #9e804b84;
+}
+
+.btn {
+	width: 150px;
+	background-color: #c3a36a;
+	border: none;
+	outline: none;
+	height: 49px;
+	border-radius: 49px;
+	color: #d8f8f8;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.btn:hover {
+	color: #cbd1d1;
+	background-color: #846632;
+}
+
+
+/* End Contact us Form */
+
+/* Start Location */
+#location-section{
+		margin-top: 25px;
+}
+#location-section .title{
+		position: relative;
+		display: block;
+		margin: auto;
+		color: #cbd1d1;
+		height: fit-content;
+		width: 50%;
+		text-align: center;
+		padding: 25px 0;
+}
+		/* Start Title Hover effect */
+
+#location-section .title h1::before,
+#location-section .title h1::after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 1px;
+		background: #9e804b;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: 0.25s ease-in;
+}
+#location-section .title h1::before{
+		left:-7%;
+}
+#location-section .title h1::after{
+		right:-7%;
+}
+#location-section:hover .title h1::before,
+#location-section:hover .title h1::after{
+		width: 30%;
+}
+
+		/* End Title Hover effect */
+#location-section .map{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+}
+
+/* End Location */
+
+/* Start Social media */
+
+.social-media{
+		margin-top: 41px;
+		background-color: #070c0d;
+		padding: 15px;
+}
+.social-media .links{
+		width: 30%;
+		display: flex;
+		margin: auto;
+		justify-content: space-around;
+}
+.social-media .links i{
+		color: #9e804b;
+}
+.social-media .links i:hover{
+		color: #564526dc;
+}
+/* End social media */
+
+/* Start copy right */
+
+.copy-right{
+		padding: 10px;
+		background-color: #040607c2;
+}
+
+.copy-right .text{
+		width: 100%;
+		display:flex;
+		justify-content: center;
+}
+
+.copy-right .text h4{
+		margin: 0;
+		color:#cbd1d1;
+}
+
+/* End copy right */
+
+/* Start scroll bar styling */
+::-webkit-scrollbar{
+		width: 10px;
+}
+::-webkit-scrollbar-track{
+		background-color: #2d3b3e;
+		box-shadow: 0 0 2.5px #0b1315 inset;
+}
+::-webkit-scrollbar-thumb{
+		background-color: #9e804b93;
+}
+::-webkit-scrollbar-thumb:hover{
+		background-color: #9e804b;
+}
+::-webkit-scrollbar-corner{
+		background-color: #9e804b;
+}
+
+/* End scroll bar styling */
+
+@media screen and (max-width: 700px) {
+	.container{
+		width: 95%;
+	}
+	.input-field{
+		grid-template-columns: 15% 85%;
+	}
+		.contact-info .contact .vline{
+				display: none;
+				width: 0;
+		}
+		.contact-info .title h1::before{
+				left:-40%;
+		}
+		.contact-info .title h1::after
+		{
+				right: -40%;
+		}
+		.contact-us .title h1::before{
+				left:-30%;
+		}
+		.contact-us .title h1::after{
+				right: -30%;
+		}
+		#location-section .title h1::before{
+				left:-30%;
+		}
+		#location-section .title h1::after{
+				right:-30%;
+		}
+}
